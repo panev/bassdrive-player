@@ -5,12 +5,9 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <!-- compiled css output -->
     <link href="css/ionic.app.css" rel="stylesheet">
-    -->
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -39,10 +36,17 @@
 
     </script>
 
-    <audio id="bdplayer" src="http://shouthost.com.32-1.streams.bassdrive.com:8200/;" volume="0.1"></audio>
-      
-    <button class="bd-play" onclick="bdplayer.play()" ng-click="hide">Play the Audio</button>
-    <button class="bd-pause" onclick="bdplayer.pause()">Pause the Audio</button>
+    <div class="bd-container">
+
+
+        <audio id="bdplayer" src="http://shouthost.com.32-1.streams.bassdrive.com:8200/;" volume="0.1"></audio>
+
+        <button class="bd-play" onclick="bdplayer.play()" ng-click="hide">Play the Audio</button>
+        <button class="bd-pause" onclick="bdplayer.pause()">Pause the Audio</button>
+
+        <div class="bd-gradient"></div>
+
+    </div>
 
     </ion-nav-view>
   </body>

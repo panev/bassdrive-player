@@ -21,3 +21,38 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+// components
+.bd-superstrech {
+	height: 100vh;
+	width: 100%;
+}
+
+$bd-grad-main: linear-gradient(135deg, rgba(155, 46, 99, 0.75) 0%,rgba(9, 32, 101, 0.8) 90%); // .75 opacity on layer
+$bd-grad-secondary: linear-gradient(135deg, rgba(59, 194, 103, 1) 0%,rgba(0, 100, 127, 1) 80%); // .60 opacity on layer
+
+
+// home view
+.bd-container {
+	@extend .bd-superstrech;
+	background-image: url('../img/background-main.png');
+	background-size: 100%;
+}
+
+.bd-gradient {
+	position: absolute;
+	z-index: 1;
+	top: 0; right: 0; left: 0; bottom: 0;
+	opacity: 0.75;
+	background: $bd-grad-main;
+}
+
+
+// draft
+button {
+	z-index: 2;
+	position: relative;
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 40px;
+	top: 30%;
+}
