@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter', ['ionic', 'starter.services', 'ionic-audio'])
 
 .controller('DashCtrl', function($scope) {})
 
@@ -25,4 +25,17 @@ angular.module('starter.controllers', [])
   $scope.settings = {
     enableFriends: true
   };
-});
+})
+
+.controller('MusicCtrl', ['$scope', 'MediaManager', function($scope, MediaManager) {
+    
+    $scope.dynamicTrack = {};   // we use this scope variable to dynamically assign a track
+
+    $scope.myTrack = {
+        url: 'http://oggvorbis.tb-stream.net:80/technobase.ogg',
+        artist: 'Somebody',
+        title: 'Song name',
+        art: 'img/album_art.jpg'
+    };
+
+}]);
